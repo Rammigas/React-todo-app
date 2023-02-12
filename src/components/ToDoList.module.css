@@ -1,0 +1,122 @@
+.todo__box {
+  width: 100%;
+  padding: 20px 0px;
+}
+.todo__box ul {
+  padding: 0px;
+}
+
+.btn__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+}
+
+.btn__box button {
+  padding: 10px 25px;
+  background-color: rgb(85, 85, 85);
+  border-color: #432;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 500px) {
+  .btn__box {
+    width: 250px;
+  }
+
+  .btn__box button {
+    padding: 5px 15px;
+  }
+}
+.btn__box button:hover {
+  background-color: #432;
+}
+
+.list__container li {
+  font-size: 20px;
+  font-weight: 500;
+  border: 3px solid #123;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list__container button {
+  padding: 10px 25px;
+  background-color: #234;
+  border-color: #f52626;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+.list__container button:hover {
+  background-color: #f52626;
+}
+/*Checkbox styling ======================================================================*/
+.checkbox > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.checkbox > span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.checkbox > span::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на checkbox */
+.checkbox > input:not(:disabled):not(:checked) + span:hover::before {
+  border-color: #b3d7ff;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.checkbox > input:not(:disabled):active + span::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.checkbox > input:focus + span::before {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.checkbox > input:focus:not(:checked) + span::before {
+  border-color: #80bdff;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.checkbox > input:checked + span::before {
+  border-color: rgb(17, 40, 51);
+  background-color: rgb(17, 40, 51);
+}
+.checkbox > input:checked + span {
+  text-decoration: line-through;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.checkbox > input:disabled + span::before {
+  background-color: #e9ecef;
+}
