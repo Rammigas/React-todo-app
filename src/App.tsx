@@ -29,6 +29,11 @@ function App() {
       title: "Learn Redux",
       isDone: false,
     },
+	 {
+      id: 5,
+      title: "Upload project to Github",
+      isDone: true,
+    }
   ]);
 
   // Function change flag Task-----------------------------------------------------------------
@@ -52,7 +57,7 @@ function App() {
   const addTask = (value: string) => {
     const currentTasks = [...tasks];
     if (value === "") {
-      alert(`Write what you want to do!!! This form couldn't be empty!!!`);
+      alert(`Write what you want to do!  This form couldn't be empty!!!`);
     } else {
       currentTasks.push({
         title: value,
