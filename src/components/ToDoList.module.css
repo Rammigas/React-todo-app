@@ -33,6 +33,11 @@
 .btn__box button:hover {
   background-color: #432;
 }
+.list__container {
+  max-height: 330px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 
 .list__container li {
   font-size: 20px;
